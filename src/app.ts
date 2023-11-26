@@ -5,6 +5,7 @@ import { urlencoded, json } from "body-parser";
 import dotenv from 'dotenv';
 import cors from 'cors';
 import pacientesRoutes from './routes/paciente.route'
+import doctoresRoutes from './routes/doctor.route'
 
 dotenv.config();
 
@@ -21,6 +22,9 @@ app.get('./',(request,response)=>{
 
 //Las rutas del paciente
 app.use('/api/pacientes/',pacientesRoutes)
+
+//Las rutas del doctor
+app.use('/api/doctores/',doctoresRoutes)
 
 //Error de rutas
 app.use( (request, response)=>{

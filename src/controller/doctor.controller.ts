@@ -10,7 +10,7 @@ export const getDoctores:RequestHandler=async(request, response)=>{
         const doctores=await Doctor.findAll()
         response.status(200).json({
             message:"Operacion Exitosa",
-            pacientes: doctores
+            doctores: doctores
         })
 
         
@@ -34,7 +34,7 @@ export const getDoctoresByID:RequestHandler=async(request, response)=>{
         if(DoctorByID){
             response.status(200).json({
                 message:"Doctor traido con exito",
-                paciente:DoctorByID
+                Doctor:DoctorByID
             })
 
         }else{
