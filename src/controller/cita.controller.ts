@@ -29,7 +29,7 @@ export const getOneCita:RequestHandler=async(request, response)=>{
         const {profesional,paciente,fecha} = request.query
         const citaEncontrar = await Cita.findOne({where:{
             //aqui dice fehca porque si me quedo mal en el model :(
-            fehca_hora:fecha,
+            fecha_hora:fecha,
             id_paciente:paciente,
             id_profesional:profesional
         }})
@@ -78,7 +78,7 @@ export const UpdateCita:RequestHandler=async(request, response)=>{
         const {profesional,paciente,fecha} = request.query
         const citaEncontrar = await Cita.findOne({where:{
             //aqui dice fehca porque si me quedo mal en el model :(
-            fehca_hora:fecha,
+            fecha_hora:fecha,
             id_paciente:paciente,
             id_profesional:profesional
         }})
@@ -89,7 +89,7 @@ export const UpdateCita:RequestHandler=async(request, response)=>{
             })
         }else{
             await Cita.update(request.body,{where:{
-                fehca_hora:fecha,
+                fecha_hora:fecha,
                 id_paciente:paciente,
                 id_profesional:profesional
             }})
@@ -116,7 +116,7 @@ export const DeleteCita:RequestHandler=async(request, response)=>{
         const {profesional,paciente,fecha} = request.query
         const citaEncontrar = await Cita.findOne({where:{
             //aqui dice fehca porque si me quedo mal en el model :(
-            fehca_hora:fecha,
+            fecha_hora:fecha,
             id_paciente:paciente,
             id_profesional:profesional
         }})
@@ -127,7 +127,7 @@ export const DeleteCita:RequestHandler=async(request, response)=>{
             })
         }else{
             await Cita.destroy({where:{
-                fehca_hora:fecha,
+                fecha_hora:fecha,
                 id_paciente:paciente,
                 id_profesional:profesional
             }})
@@ -203,8 +203,10 @@ export const getEspecialidadDoctor:RequestHandler=async(request, response)=>{
     try {
         const citaEspecialidad=await Cita.findAll({
             include:{
+                
                 model:Doctor,
                 attributes:["especialidad"]
+                
             }
         })
         if(citaEspecialidad.length===0){

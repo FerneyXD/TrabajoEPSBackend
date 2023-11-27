@@ -8,7 +8,7 @@ const router = Router();
 router.get("/", getCitas)
 router.get("/:idpaciente/paciente", getCitasByPaciente)
 router.get("/:iddoctor/doctor", getCitasByDoctor)
-router.get("/doctor/:especialidad", getEspecialidadDoctor)
+router.get("/doctor/especialidad", getEspecialidadDoctor)
 router.get("/one-cita", getOneCita)
 router.post("/", CreateCita)
 router.put("/", UpdateCita)
