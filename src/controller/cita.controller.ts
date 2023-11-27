@@ -3,6 +3,8 @@ import { Cita } from "../models/cita.model";
 import { json } from "body-parser";
 import { get, request } from "http";
 import { where } from "sequelize";
+import { Doctor } from "../models/doctor.model";
+import { Sequelize } from "sequelize-typescript";
 
 export const getCitas:RequestHandler=async(request, response)=>{
     try {
@@ -141,6 +143,93 @@ export const DeleteCita:RequestHandler=async(request, response)=>{
             message:"Error al eliminar la cita, ni idea que paso mano!",
             error:err
         })
+        
+    }
+}
+
+export const getCitasByPaciente:RequestHandler=async(request, response)=>{
+    try {
+        
+        const citasPaciente= await Cita.findAll({where:{id_paciente:request.params.idpaciente}})
+        if(citasPaciente.length===0){
+            response.status(200).json({
+                message: "El paciente no tiene citas asignadas"
+            })
+        }else{
+            response.status(200).json({
+                message:"Citas del paciente traidas con éxito",
+                Citas_Paciente:citasPaciente
+            })
+        }
+
+
+    } catch (error) {
+        const err=error as Error
+        response.status(500).json({
+            message:"Error al traer las citas!",
+            error:err
+        })
+        
+    }
+}
+
+export const getCitasByDoctor:RequestHandler=async(request, response)=>{
+    try {
+        
+        const citasPaciente= await Cita.findAll({where:{id_profesional:request.params.iddoctor}})
+        if(citasPaciente.length===0){
+            response.status(200).json({
+                message: "El doctor no tiene citas asignadas"
+            })
+        }else{
+            response.status(200).json({
+                message:"Citas del doctor traidas con éxito",
+                Citas_Paciente:citasPaciente
+            })
+        }
+
+
+    } catch (error) {
+        const err=error as Error
+        response.status(500).json({
+            message:"Error al traer las citas!",
+            error:err
+        })
+        
+    }
+}
+
+export const getEspecialidadDoctor:RequestHandler=async(request, response)=>{
+    try {
+        const citaEspecialidad=await Cita.findAll({
+            include:{
+                model:Doctor,
+                attributes:["especialidad"]
+            }
+        })
+        if(citaEspecialidad.length===0){
+            response.status(200).json({
+                message:"No hay citas asignadas para esa especialidad"
+            })
+
+        }else{
+            response.status(200).json({
+                message:"Doctor por especialidad traido con éxito",
+                Datos:citaEspecialidad
+                
+            })
+    
+                 
+        }
+        
+        
+    } catch (error) {
+        const err=error as Error
+        response.status(500).json({
+            message:"Error al traer las citas!",
+            error:err
+        })
+        
         
     }
 }

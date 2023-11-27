@@ -1,5 +1,6 @@
 import { Router} from "express";
-import { CreateDoctor, DeleteDoctor, UpdateDoctor, getDoctores, getDoctoresByID } from "../controller/doctor.controller";
+import { CreateDoctor, DeleteDoctor, UpdateDoctor, getDoctores, getDoctoresByID} from "../controller/doctor.controller";
+
 
 
 
