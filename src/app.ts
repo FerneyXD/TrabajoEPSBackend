@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import pacientesRoutes from './routes/paciente.route'
 import doctoresRoutes from './routes/doctor.route'
+import citasRoutes from './routes/citas.routes'
 
 dotenv.config();
 
@@ -26,11 +27,13 @@ app.use('/api/pacientes/',pacientesRoutes)
 //Las rutas del doctor
 app.use('/api/doctores/',doctoresRoutes)
 
+//Las rutas del doctor
+app.use('/api/citas/',citasRoutes)
+
 //Error de rutas
 app.use( (request, response)=>{
     response.status(404).send('404: page no found')
 })
-
 
 
 //Error de servidor

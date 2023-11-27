@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const cita_controller_1 = require("../controller/cita.controller");
+const router = (0, express_1.Router)();
+router.get("/", cita_controller_1.getCitas);
+router.get("/one-cita", cita_controller_1.getOneCita);
+router.post("/", cita_controller_1.CreateCita);
+router.put("/", cita_controller_1.UpdateCita);
+router.delete("/", cita_controller_1.DeleteCita);
+exports.default = router;

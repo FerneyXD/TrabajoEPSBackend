@@ -22,6 +22,8 @@ app.get('./', (request, response) => {
 app.use('/api/pacientes/', paciente_route_1.default);
 //Las rutas del doctor
 app.use('/api/doctores/', doctor_route_1.default);
+//Las rutas del doctor
+app.use('/api/citas/', doctor_route_1.default);
 //Error de rutas
 app.use((request, response) => {
     response.status(404).send('404: page no found');

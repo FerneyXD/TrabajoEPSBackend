@@ -17,7 +17,7 @@ const getDoctores = (request, response) => __awaiter(void 0, void 0, void 0, fun
         const doctores = yield doctor_model_1.Doctor.findAll();
         response.status(200).json({
             message: "Operacion Exitosa",
-            pacientes: doctores
+            doctores: doctores
         });
     }
     catch (error) {
@@ -35,7 +35,7 @@ const getDoctoresByID = (request, response) => __awaiter(void 0, void 0, void 0,
         if (DoctorByID) {
             response.status(200).json({
                 message: "Doctor traido con exito",
-                paciente: DoctorByID
+                Doctor: DoctorByID
             });
         }
         else {
@@ -47,7 +47,7 @@ const getDoctoresByID = (request, response) => __awaiter(void 0, void 0, void 0,
     catch (error) {
         const err = error;
         response.status(500).json({
-            message: "Error al obtener los pacientes",
+            message: "Error al obtener los Doctores",
             error: err
         });
     }
@@ -63,7 +63,7 @@ const CreateDoctor = (request, response) => __awaiter(void 0, void 0, void 0, fu
     catch (error) {
         const err = error;
         response.status(500).json({
-            message: "Error al crear el paciente",
+            message: "Error al crear el Doctor",
             error: err
         });
     }

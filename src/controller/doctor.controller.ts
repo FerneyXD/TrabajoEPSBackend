@@ -46,7 +46,7 @@ export const getDoctoresByID:RequestHandler=async(request, response)=>{
     catch(error){
         const err = error as Error
         response.status(500).json({
-            message:"Error al obtener los pacientes",
+            message:"Error al obtener los Doctores",
             error:err
 
         })
@@ -65,7 +65,7 @@ export const CreateDoctor:RequestHandler=async(request, response)=>{
     } catch (error) {
         const err = error as Error
         response.status(500).json({
-            message:"Error al crear el paciente",
+            message:"Error al crear el Doctor",
             error:err
         })
 
