@@ -64,7 +64,7 @@ imagen aqui
 
 **Todas la pruebas se hacen con POSTMAN**
 
-### Pacientes
+## Pacientes
 ##### Crear Paciente
 Para crear pacientes tenemos que enviar por medio de un post el body y un json tal y como se muestra en la imagen de abajo, todo con el siguiente END POINT `http://localhost:3000/api/pacientes/`.
 
@@ -89,7 +89,7 @@ Para actualizar un paciente, solo enviamos por medio de un put con un json en el
 
 giiif
 
-### Doctores
+## Doctores
 ##### Crear Doctor
 Para crear un doctor hacemos un post y con un json en el body con la información del doctor a crear y con el siguiente END POINT: `http://localhost:3000/api/doctores/`
 
@@ -108,5 +108,51 @@ giif
 ##### Actualizar Doctor
 Para actualizar un doctor específico se debe hacer un PUT y tener en el body un JSON con la información a actualizar todo con el siguiente END POINT.
 `http://localhost:3000/api/doctores/id_doctor`
+
+giiif
+
+## Citas
+##### Crear cita
+Para crear una cita se debe hacer un POST con un JSON en el body y el siguiente END POINT.
+`http://localhost:3000/api/citas/`
+
+giiif
+
+##### Traer citas
+Para traer las citas se debe hacer un GET con el siguiente END POINT.
+`http://localhost:3000/api/citas/`
+
+giiif
+
+##### Traer cita específica
+Para traer una cita específica se debe hacer un GET con un query en el siguiente END POINT.
+`http://localhost:3000/api/citas/one-cita?profesional=id_doctor&paciente=id_paciente&fecha=2023-11-24T00:00:00:000Z`
+
+giiif
+
+##### Actualizar cita
+Para actualizar una cita específica se debe hacer un PUT con un JSON en el body y un query en el siguiente END POINT.
+`http://localhost:3000/api/citas/one-cita?profesional=id_doctor&paciente=id_paciente&fecha=2023-11-24T00:00:00:000Z`
+
+giiif
+##### Eliminar Cita
+Para eliminar una cita específica se debe hacer un DELETE con un JSON en el body y un query en el siguiente END POINT.
+`http://localhost:3000/api/citas/one-cita?profesional=id_doctor&paciente=id_paciente&fecha=2023-11-24T00:00:00:000Z`
+
+giiff
+
+##### Traer cita por paciente
+Para traer las citas que tiene un paciente específico, se debe hacer un GET con el siguiente END POINT.
+`http://localhost:3000/api/citas/id_paciente/paciente`
+
+giiif
+##### Traer cita por doctor
+Para traer las citas que tiene un doctor específico, se debe hacer un GET con el siguiente END POINT.
+`http://localhost:3000/api/citas/id_paciente/paciente`
+
+giiif
+##### Traer citas con especialidad
+Para traer las citas que tiene un doctor específico, se debe hacer un GET con el siguiente END POINT.
+`http://localhost:3000/api/citas/doctor/especialidad`
 
 giiif
