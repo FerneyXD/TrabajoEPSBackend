@@ -13,9 +13,10 @@ exports.DeleteCita = exports.UpdateCita = exports.CreateCita = exports.getOneCit
 const cita_model_1 = require("../models/cita.model");
 const getCitas = (request, response) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield cita_model_1.Cita.findAll();
+        const citasTraidas = yield cita_model_1.Cita.findAll();
         response.status(200).json({
-            message: "Citas traidas con éxito"
+            message: "Citas traidas con éxito",
+            citas: citasTraidas
         });
     }
     catch (error) {
