@@ -16,7 +16,7 @@ export class Cita extends Model{
         primaryKey:true
 
     })
-    fehca_hora!:Date
+    fecha_hora!:Date
 
     //Esto quiere decir que la primary key es conformada por dos foreignkey de los modelos doctor y paciente
     @PrimaryKey
