@@ -84,4 +84,29 @@ Para eliminar un paciente específico hacemos un delete con el siguiente END POI
 
 giiif
 ##### Actualizar Paciente
-Para 
+Para actualizar un paciente, solo enviamos por medio de un put con un json en el body con la información a actualizar y con el siguiente END POINT.
+`http://localhost:3000/api/pacientes/id_paciente`.
+
+giiif
+
+### Doctores
+##### Crear Doctor
+Para crear un doctor hacemos un post y con un json en el body con la información del doctor a crear y con el siguiente END POINT: `http://localhost:3000/api/doctores/`
+
+giiif
+
+##### Traer Doctore
+Para traer un doctor específico hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/doctores/id_doctor`
+
+giiif
+##### Eliminar Doctor
+Para eliminar un doctor hacemos un DELETE con el siguiente END POINT.
+`http://localhost:3000/api/doctores/id_doctor`
+
+giif
+
+##### Actualizar Doctor
+Para actualizar un doctor específico se debe hacer un PUT y tener en el body un JSON con la información a actualizar todo con el siguiente END POINT.
+`http://localhost:3000/api/doctores/id_doctor`
+
+giiif
