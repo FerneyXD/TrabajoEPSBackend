@@ -14,7 +14,7 @@ Este proyecto es un API REST que simula el funcionamiento básico de una EPS, en
 
 [TOC]
 
-# Instalacion
+# Instalación
 Para instalar este repositorio, lo puedes hacer como cualquier otro haciendo un Git Clone, sin embargo te dejo un represetación visual paso a paso de como lo puedes hacer.
 ####Paso 1
 Te ubicas en la carpeta donde vas a copiar el repositorio, das click derecho y eliges la opción Open Git Bash here (para acceder esta opción tienes que tener instalado Git Hub con anterioridad) ver la imagen de abajo.
@@ -66,32 +66,33 @@ imagen aqui
 
 ## Pacientes
 ##### Crear Paciente
-Para crear pacientes tenemos que enviar por medio de un post el body y un json tal y como se muestra en la imagen de abajo, todo con el siguiente END POINT `http://localhost:3000/api/pacientes/`.
+Para crear pacientes tenemos que enviar por medio de un POST el body y un JSON tal y como se muestra en la imagen de abajo, todo con el siguiente END POINT. `http://localhost:3000/api/pacientes/`
 
 ![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/CrearPaciente.gif)
 ##### Traer Pacientes
-Para traer todos los pacientes creados hacemos un get con el siguiente END POINT `http://localhost:3000/api/pacientes/`.
+Para traer todos los pacientes creados hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/pacientes/`
 
 giiif
 
 ##### Traer Paciente
-Para traer un unico paciente, hacemos un get con el siguiente END POINT `http://localhost:3000/api/pacientes/id_paciente`.
+Para traer un unico paciente, hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/pacientes/id_paciente`
 
 giiif
 
 ##### Eliminar Paciente
-Para eliminar un paciente específico hacemos un delete con el siguiente END POINT `http://localhost:3000/api/pacientes/id_paciente`.
+Para eliminar un paciente específico hacemos un DELETE con el siguiente END POINT. `http://localhost:3000/api/pacientes/id_paciente`
 
 giiif
 ##### Actualizar Paciente
-Para actualizar un paciente, solo enviamos por medio de un put con un json en el body con la información a actualizar y con el siguiente END POINT.
-`http://localhost:3000/api/pacientes/id_paciente`.
+Para actualizar un paciente, solo enviamos por medio de un PUT con un JSON en el body con la información a actualizar y con el siguiente END POINT.
+`http://localhost:3000/api/pacientes/id_paciente`
 
 giiif
 
 ## Doctores
 ##### Crear Doctor
-Para crear un doctor hacemos un post y con un json en el body con la información del doctor a crear y con el siguiente END POINT: `http://localhost:3000/api/doctores/`
+Para crear un doctor hacemos un POST y con un JSON en el body con la información del doctor a crear y con el siguiente END POINT.
+`http://localhost:3000/api/doctores/`
 
 giiif
 
@@ -156,3 +157,20 @@ Para traer las citas que tiene un doctor específico, se debe hacer un GET con e
 `http://localhost:3000/api/citas/doctor/especialidad`
 
 giiif
+
+# Distribucion de proyecto
+El proyecto tiene diferentes carpetas y archivos, en las cuales puedes encontrar [SRC](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src "SRC"), donde tenemos otras subcarpetas las cuales son:
+
+- [Controller](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src/controller "Controller") en esta carpeta estan los metodos con la lógica de el POST, GET, PUT y DELETE de las diferentes entidades.
+- [db](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src/db "db") aquí se encuentra el archivo de configuracion de la base de datos.
+- [models](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src/models "models") en esta carpeta estan los modelos de las tablas según el MER.
+- [routes](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src/routes "routes") aquí puedes encontrar archivos con la configuración de las rutas de cada entidad.
+- El archivo [app.ts](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/src/app.ts "app.ts")es el archivo TypeScrip principal del app.
+
+**Los archivos que estan fuera de la carpeta [SRC](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src "SRC") son archivos de configuración del `NPM INIT` donde estan las dependencias y demás.**
+
+
+# Tecnologias utilizadas
+Las tecnologias utilizadas son Node.js, TypeScript, MYSQL y las siguientes dependencias, las cuales puedes consultar también, en el archivo [package.json](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/package.json "package.json").
+
+screenShot
