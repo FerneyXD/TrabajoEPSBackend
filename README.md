@@ -184,5 +184,5 @@ Las tecnologias utilizadas son Node.js, TypeScript, MYSQL y las siguientes depen
 ![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/Dependencias.PNG)
 
 # Desarolladores
-Este proyecto fue creado por Ferney David Guillen Alvarez :smile: , tomando de referencia el MER(modelo entidad relación) visto y código visto en clase.
+Este proyecto fue creado por Ferney David Guillen Alvarez :smile:, tomando de referencia el MER(modelo entidad relación) y código visto en clase.
 
