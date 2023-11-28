@@ -1,4 +1,6 @@
-# Descripción del proyecto
+#API REST EPS 🏥
+
+# Descripción del proyecto 
 Este proyecto es un API REST que simula el funcionamiento básico de una EPS, en el cual se puedes crear doctores, pacientes y asignar citas.
 
 
@@ -8,25 +10,20 @@ Este proyecto es un API REST que simula el funcionamiento básico de una EPS, en
 2. CRUD Doctores
 3. CRUD Cita
 
-##  **Tabla de contenido**
-
-[TOCM]
-
-[TOC]
 
 # Instalación
 Para instalar este repositorio, lo puedes hacer como cualquier otro haciendo un Git Clone, sin embargo te dejo un represetación visual paso a paso de como lo puedes hacer.
 ####Paso 1
 Te ubicas en la carpeta donde vas a copiar el repositorio, das click derecho y eliges la opción Open Git Bash here (para acceder esta opción tienes que tener instalado Git Hub con anterioridad) ver la imagen de abajo.
 
-![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/2proyecto.PNG)
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/2proyecto.PNG)
 
 #### Paso 2
 Copias el código descrito en lineas abajo y lo pegas en la ventana del Git Bash.
 
 `git clone https://github.com/FerneyXD/TrabajoEPSBackend.git`
 
-![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/3proyecto.PNG)
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/3proyecto.PNG)
 
 #### Paso 3
 Ya con el repositorio clonado, creas un archivo de .env en la raiz de la carpeta y agregas las siguientes variables de entorno.
@@ -36,7 +33,9 @@ Ya con el repositorio clonado, creas un archivo de .env en la raiz de la carpeta
     USERNAME="root"
     PASSWORD="Contraseña de la base de datos"
     DATABASE='Nombre de la base de datos'
-![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/4proyecto.PNG)
+	
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/4proyecto.PNG)
+
 **El puerto esta configurado por defecto, (3306) que es el de puerto MYSQL, en caso de que tengas otro puerto,  puedes modificarlo directamente desde el archivo config.ts que se encuentra en la carpeta "src/db" o tambien puedes crear un variable 
 de entorno llamada puerto, abajo puedes ver un ejemplo.**
 
@@ -49,18 +48,20 @@ En el archivo .env.
     DATABASE='Nombre de la base de datos'
 	PUERTO=Tu número de puerto
 o directamente en el archivo config.ts
-![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/5proyecto.PNG)
+
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/5proyecto.PNG)
 
 
 # Modelo de datos utilizado
 Para este proyecto se utilizo MYSQL y la libreria sequelize para el manejo de datos desde TypeScript, el modelo entidad relación (MER) utilizado es el siguiente.
-![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/MER%20(1).png)
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/MER%20(1).png)
 
 # Funcionalidades del proyecto
 A continuación veremos cada una de las funcionalidades de la API.
 
 Para iniciar el API solo necesitamos ejecutar el siguiente código `npm run dev` y esperar a que nos muestre el mensaje de Database Connected.
-imagen aqui
+
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/DatabaseConnected.PNG)
 
 **Todas la pruebas se hacen con POSTMAN**
 
@@ -68,26 +69,29 @@ imagen aqui
 ##### Crear Paciente
 Para crear pacientes tenemos que enviar por medio de un POST el body y un JSON tal y como se muestra en la imagen de abajo, todo con el siguiente END POINT. `http://localhost:3000/api/pacientes/`
 
-![](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/ImagenesReadme/CrearPaciente.gif)
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/CrearPaciente.gif)
+
 ##### Traer Pacientes
 Para traer todos los pacientes creados hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/pacientes/`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerPacientes.gif)
 
 ##### Traer Paciente
 Para traer un unico paciente, hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/pacientes/id_paciente`
 
-giiif
+![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerPaciente.gif)
+
 
 ##### Eliminar Paciente
 Para eliminar un paciente específico hacemos un DELETE con el siguiente END POINT. `http://localhost:3000/api/pacientes/id_paciente`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/EliminarPaciente.gif)
+
 ##### Actualizar Paciente
 Para actualizar un paciente, solo enviamos por medio de un PUT con un JSON en el body con la información a actualizar y con el siguiente END POINT.
 `http://localhost:3000/api/pacientes/id_paciente`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/ActualizarPaciente.gif)
 
 ## Doctores
 ##### Crear Doctor
@@ -174,3 +178,7 @@ El proyecto tiene diferentes carpetas y archivos, en las cuales puedes encontrar
 Las tecnologias utilizadas son Node.js, TypeScript, MYSQL y las siguientes dependencias, las cuales puedes consultar también, en el archivo [package.json](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/package.json "package.json").
 
 screenShot
+
+# Desarolladores
+Este proyecto fue creado por Ferney David Guillen Alvarez :smile: , tomando de referencia el MER(modelo entidad relación) visto y código visto en clase.
+
