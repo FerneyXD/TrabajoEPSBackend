@@ -1,4 +1,4 @@
-#API REST EPS 🏥
+# API REST EPS 🏥
 
 # Descripción del proyecto 
 Este proyecto es un API REST que simula el funcionamiento básico de una EPS, en el cual se puedes crear doctores, pacientes y asignar citas.
@@ -13,7 +13,7 @@ Este proyecto es un API REST que simula el funcionamiento básico de una EPS, en
 
 # Instalación
 Para instalar este repositorio, lo puedes hacer como cualquier otro haciendo un Git Clone, sin embargo te dejo un represetación visual paso a paso de como lo puedes hacer.
-####Paso 1
+#### Paso 1
 Te ubicas en la carpeta donde vas a copiar el repositorio, das click derecho y eliges la opción Open Git Bash here (para acceder esta opción tienes que tener instalado Git Hub con anterioridad) ver la imagen de abajo.
 
 ![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/2proyecto.PNG)
@@ -65,102 +65,106 @@ Para iniciar el API solo necesitamos ejecutar el siguiente código `npm run dev`
 
 **Todas la pruebas se hacen con POSTMAN**
 
-## Pacientes
-##### Crear Paciente
+## Pacientes 🧓🧑
+#### Crear Paciente
 Para crear pacientes tenemos que enviar por medio de un POST el body y un JSON tal y como se muestra en la imagen de abajo, todo con el siguiente END POINT. `http://localhost:3000/api/pacientes/`
 
 ![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/CrearPaciente.gif)
 
-##### Traer Pacientes
+#### Traer Pacientes
 Para traer todos los pacientes creados hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/pacientes/`
 
 ![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerPacientes.gif)
 
-##### Traer Paciente
+#### Traer Paciente
 Para traer un unico paciente, hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/pacientes/id_paciente`
 
 ![](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerPaciente.gif)
 
 
-##### Eliminar Paciente
+#### Eliminar Paciente
 Para eliminar un paciente específico hacemos un DELETE con el siguiente END POINT. `http://localhost:3000/api/pacientes/id_paciente`
 
 ![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/EliminarPaciente.gif)
 
-##### Actualizar Paciente
+#### Actualizar Paciente
 Para actualizar un paciente, solo enviamos por medio de un PUT con un JSON en el body con la información a actualizar y con el siguiente END POINT.
 `http://localhost:3000/api/pacientes/id_paciente`
 
 ![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/ActualizarPaciente.gif)
 
-## Doctores
-##### Crear Doctor
+## Doctores 👨‍⚕️👩‍⚕️
+#### Crear Doctor
 Para crear un doctor hacemos un POST y con un JSON en el body con la información del doctor a crear y con el siguiente END POINT.
 `http://localhost:3000/api/doctores/`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/CrearDoctor.gif )
 
-##### Traer Doctore
+#### Traer Doctor
 Para traer un doctor específico hacemos un GET con el siguiente END POINT. `http://localhost:3000/api/doctores/id_doctor`
 
-giiif
-##### Eliminar Doctor
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerDoctor.gif )
+
+#### Eliminar Doctor
 Para eliminar un doctor hacemos un DELETE con el siguiente END POINT.
 `http://localhost:3000/api/doctores/id_doctor`
 
-giif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/EliminarDoctor.gif )
 
-##### Actualizar Doctor
+#### Actualizar Doctor
 Para actualizar un doctor específico se debe hacer un PUT y tener en el body un JSON con la información a actualizar todo con el siguiente END POINT.
 `http://localhost:3000/api/doctores/id_doctor`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/ActualizarDoctor.gif )
 
-## Citas
-##### Crear cita
+## Citas 📖
+#### Crear cita
 Para crear una cita se debe hacer un POST con un JSON en el body y el siguiente END POINT.
 `http://localhost:3000/api/citas/`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/CrearCita.gif )
 
-##### Traer citas
+#### Traer citas
 Para traer las citas se debe hacer un GET con el siguiente END POINT.
 `http://localhost:3000/api/citas/`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerCita.gif )
 
-##### Traer cita específica
+#### Traer cita específica
 Para traer una cita específica se debe hacer un GET con un query en el siguiente END POINT.
 `http://localhost:3000/api/citas/one-cita?profesional=id_doctor&paciente=id_paciente&fecha=2023-11-24T00:00:00:000Z`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerCitaQuery.gif )
 
-##### Actualizar cita
+#### Actualizar cita
 Para actualizar una cita específica se debe hacer un PUT con un JSON en el body y un query en el siguiente END POINT.
 `http://localhost:3000/api/citas/one-cita?profesional=id_doctor&paciente=id_paciente&fecha=2023-11-24T00:00:00:000Z`
 
-giiif
-##### Eliminar Cita
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/ActualizarCita.gif )
+
+#### Eliminar Cita
 Para eliminar una cita específica se debe hacer un DELETE con un JSON en el body y un query en el siguiente END POINT.
 `http://localhost:3000/api/citas/one-cita?profesional=id_doctor&paciente=id_paciente&fecha=2023-11-24T00:00:00:000Z`
 
-giiff
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/EliminarCita.gif )
 
-##### Traer cita por paciente
+#### Traer cita por paciente
 Para traer las citas que tiene un paciente específico, se debe hacer un GET con el siguiente END POINT.
 `http://localhost:3000/api/citas/id_paciente/paciente`
 
-giiif
-##### Traer cita por doctor
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerCitasPorPaciente.gif )
+
+#### Traer cita por doctor
 Para traer las citas que tiene un doctor específico, se debe hacer un GET con el siguiente END POINT.
 `http://localhost:3000/api/citas/id_paciente/paciente`
 
-giiif
-##### Traer citas con especialidad
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerCitasPorDoctor.gif )
+
+#### Traer citas con especialidad
 Para traer las citas que tiene un doctor específico, se debe hacer un GET con el siguiente END POINT.
 `http://localhost:3000/api/citas/doctor/especialidad`
 
-giiif
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/TraerCitasConEspecialidad.gif )
 
 # Distribucion de proyecto
 El proyecto tiene diferentes carpetas y archivos, en las cuales puedes encontrar [SRC](https://github.com/FerneyXD/TrabajoEPSBackend/tree/main/src "SRC"), donde tenemos otras subcarpetas las cuales son:
@@ -175,9 +179,9 @@ El proyecto tiene diferentes carpetas y archivos, en las cuales puedes encontrar
 
 
 # Tecnologias utilizadas
-Las tecnologias utilizadas son Node.js, TypeScript, MYSQL y las siguientes dependencias, las cuales puedes consultar también, en el archivo [package.json](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/package.json "package.json").
+Las tecnologias utilizadas son Node.js, TypeScript, MYSQL y las siguientes dependencias (las cuales puedes consultar en el archivo [package.json](https://github.com/FerneyXD/TrabajoEPSBackend/blob/main/package.json "package.json")).
 
-screenShot
+![a](https://github.com/FerneyXD/ImagenesProyecto/blob/main/Dependencias.PNG)
 
 # Desarolladores
 Este proyecto fue creado por Ferney David Guillen Alvarez :smile: , tomando de referencia el MER(modelo entidad relación) visto y código visto en clase.
